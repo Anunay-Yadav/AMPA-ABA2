@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "lifecycle": {
+    "status": "pinned",
+    "pinned_on": "2026-09-21"
+  },
+  "hugging_face": {
+    "model_id": "Qwen/Qwen3-30B-A3B-Base",
+    "revision": "1b75feb79f60b8dc6c5bc769a898c206a1c6a4f9",
+    "tokenizer_id": "Qwen/Qwen3-30B-A3B-Base",
+    "tokenizer_revision": "1b75feb79f60b8dc6c5bc769a898c206a1c6a4f9"
+  },
+  "architecture_assertions": {
+    "model_type": "qwen3_moe",
+    "num_hidden_layers": 48,
+    "hidden_size": 2048,
+    "num_attention_heads": 32,
+    "num_key_value_heads": 4,
+    "num_experts": 128,
+    "num_experts_per_tok": 8,
+    "moe_intermediate_size": 768,
+    "intermediate_size": 6144,
+    "vocab_size": 151936,
+    "torch_dtype": "bfloat16",
+    "router_aux_loss_coef": 0.001,
+    "rope_theta": 1000000
+  },
+  "notes": [
+    "Architecture assertions are validation targets, not alternate model configuration inputs.",
+    "The same immutable HF revision is required for import, tokenizer use, and HF-versus-C0 validation."
+  ]
+}

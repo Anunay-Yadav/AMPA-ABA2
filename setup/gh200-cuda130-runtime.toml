@@ -1,0 +1,12 @@
+# CSCS Enroot environment definition (EDF), consumed by srun --environment.
+image = "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa/setup/gh200-cuda130-megatron.sqsh"
+mounts = ["/iopsstor"]
+writable = true
+workdir = "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa"
+
+[env]
+WORKSPACE = "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa"
+HF_HOME = "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa/.runtime/cache/huggingface"
+NEMO_HOME = "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa/.runtime/cache/nemo"
+UV_CACHE_DIR = "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa/.runtime/cache/uv"
+CUDA_DEVICE_MAX_CONNECTIONS = "1"

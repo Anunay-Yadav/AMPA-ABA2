@@ -1,0 +1,61 @@
+diff --git a/ep/include/uccl_proxy.hpp b/ep/include/uccl_proxy.hpp
+--- a/ep/include/uccl_proxy.hpp
++++ b/ep/include/uccl_proxy.hpp
+@@ -25,7 +25,7 @@ class UcclProxy {
+   void start_remote();
+   void start_local();
+   void start_dual();
+-  void stop();
++  void stop(bool free_gpu_buffer = true);
+   int get_listen_port() const { return proxy_->get_listen_port(); }
+ 
+   // Set the offset of dispatch_rdma_recv_data_buffer within rdma_buffer
+diff --git a/ep/src/uccl_proxy.cpp b/ep/src/uccl_proxy.cpp
+--- a/ep/src/uccl_proxy.cpp
++++ b/ep/src/uccl_proxy.cpp
+@@ -148,7 +148,7 @@ void UcclProxy::start_remote() { start(Mode::Remote); }
+ void UcclProxy::start_local() { start(Mode::Local); }
+ void UcclProxy::start_dual() { start(Mode::Dual); }
+ 
+-void UcclProxy::stop() {
++void UcclProxy::stop(bool free_gpu_buffer) {
+   if (!running_.load(std::memory_order_acquire)) {
+     throw std::runtime_error("Proxy already stopped");
+   }
+@@ -155,9 +155,9 @@ void UcclProxy::stop() {
+   proxy_->set_progress_run(false);
+   if (thread_.joinable()) thread_.join();
+   running_.store(false, std::memory_order_release);
+-  // Because proxies share the gpu_buffer, only destroy gpu_buffer for the first
+-  // proxy.
+-  proxy_->destroy(thread_idx_ == 0);
++  // Caller-owned buffers must outlive proxy deregistration and peer IPC close.
++  // Legacy owning callers still release shared storage through the first proxy.
++  proxy_->destroy(free_gpu_buffer && thread_idx_ == 0);
+ }
+ 
+ void UcclProxy::start(Mode m) {
+diff --git a/ep/src/uccl_ep.cc b/ep/src/uccl_ep.cc
+--- a/ep/src/uccl_ep.cc
++++ b/ep/src/uccl_ep.cc
+@@ -2738,7 +2738,7 @@
+       .def("start_remote", &UcclProxy::start_remote)
+       .def("start_local", &UcclProxy::start_local)
+       .def("start_dual", &UcclProxy::start_dual)
+-      .def("stop", &UcclProxy::stop)
++      .def("stop", &UcclProxy::stop, nb::arg("free_gpu_buffer") = true)
+       .def("get_listen_port", &UcclProxy::get_listen_port)
+       .def("get_atomic_buffer_ptr", &UcclProxy::get_atomic_buffer_ptr)
+       .def("set_atomic_buffer_ptr", &UcclProxy::set_atomic_buffer_ptr)
+diff --git a/ep/bench/utils.py b/ep/bench/utils.py
+--- a/ep/bench/utils.py
++++ b/ep/bench/utils.py
+@@ -693,7 +693,7 @@ def destroy_uccl(proxies, workers):
+ 
+     try:
+         for p in proxies:
+-            p.stop()
++            p.stop(free_gpu_buffer=False)
+     except Exception:
+         pass
+     try:

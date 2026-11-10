@@ -1,0 +1,6 @@
+[submodule "Megatron-LM"]
+	path = Megatron-LM
+	url = git@github.com:Anunay-Yadav/Megatron-LM.git
+[submodule "Megatron-Bridge"]
+	path = Megatron-Bridge
+	url = git@github.com:Anunay-Yadav/Megatron-Bridge.git

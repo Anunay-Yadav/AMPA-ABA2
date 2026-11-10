@@ -1,0 +1,71 @@
+# syntax=docker/dockerfile:1
+#
+# GH200/CUDA 13 dependency image. Local source trees are never copied here:
+# the Slurm launcher overlays the mounted Megatron-LM and Megatron-Bridge
+# checkouts as editable packages for every experiment.
+
+ARG BASE_IMAGE=nvcr.io/nvidia/pytorch:25.08-py3
+FROM ${BASE_IMAGE}
+
+ARG MEGATRON_BRIDGE_REF
+ARG UV_VERSION=0.10.2
+
+ENV DEBIAN_FRONTEND=noninteractive \
+    PIP_CONSTRAINT= \
+    UV_LINK_MODE=copy \
+    UV_HTTP_TIMEOUT=120 \
+    UV_CONCURRENT_BUILDS=1 \
+    UV_CONCURRENT_INSTALLS=1 \
+    MAX_JOBS=8 \
+    NVTE_CUDA_ARCHS=90 \
+    NVTE_WITH_NCCL_EP=0 \
+    PATH=/opt/venvs/megatron-bridge/bin:/usr/local/bin:${PATH}
+
+# The NGC base provides CUDA 13.0, PyTorch, NCCL, and the CUDA toolchain.
+# Keep only the tools required to fetch and resolve Bridge's locked metadata.
+# NCCL-EP is an optional Transformer Engine component.  Its source build
+# requires nccl_device.h, which is not provided by this base; the smoke recipe
+# selects Megatron's all-to-all dispatcher instead.
+# ARM has no locked fast-hadamard-transform wheel for this CUDA/PyTorch tuple,
+# so source builds are serialized to bound peak memory.
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends git ca-certificates curl \
+    && rm -rf /var/lib/apt/lists/* \
+    && curl -LsSf "https://astral.sh/uv/${UV_VERSION}/install.sh" | sh \
+    && install -m 0755 /root/.local/bin/uv /usr/local/bin/uv \
+    && uv --version \
+    && python - <<'PY'
+import sys
+assert sys.version_info[:2] == (3, 12), sys.version
+PY
+
+WORKDIR /opt/src
+
+# Bridge's lockfile owns its pinned Megatron-LM submodule and all required
+# CUDA 13 Transformer Engine dependencies. The first sync installs only build
+# prerequisites; the second asks Bridge itself to resolve its full lockfile.
+RUN test -n "${MEGATRON_BRIDGE_REF}" \
+    && git clone https://github.com/Anunay-Yadav/Megatron-Bridge.git Megatron-Bridge \
+    && git -C Megatron-Bridge fetch --depth 1 origin "${MEGATRON_BRIDGE_REF}" \
+    && git -C Megatron-Bridge checkout --detach FETCH_HEAD \
+    && test "$(git -C Megatron-Bridge rev-parse HEAD)" = "${MEGATRON_BRIDGE_REF}" \
+    && git -C Megatron-Bridge submodule update --init --recursive \
+    && uv venv --system-site-packages /opt/venvs/megatron-bridge \
+    && cd Megatron-Bridge \
+    && export TMS_CUDA_MAJOR="$("${CUDA_HOME:-/usr/local/cuda}"/bin/nvcc --version | sed -n 's/.*release \([0-9][0-9]*\).*/\1/p' | head -1)" \
+    && test -n "${TMS_CUDA_MAJOR}" \
+    && UV_PROJECT_ENVIRONMENT=/opt/venvs/megatron-bridge uv sync --locked --only-group build --no-install-project \
+    && UV_PROJECT_ENVIRONMENT=/opt/venvs/megatron-bridge uv sync --locked --no-default-groups --group build --no-install-project
+
+RUN /opt/venvs/megatron-bridge/bin/python - <<'PY'
+from importlib.metadata import version
+import torch
+
+assert torch.version.cuda and torch.version.cuda.startswith("13.0"), torch.version.cuda
+print(f"torch={torch.__version__}; cuda={torch.version.cuda}")
+print(f"transformer_engine={version('transformer-engine')}")
+PY
+
+RUN rm -rf /opt/src
+
+WORKDIR /workspace
