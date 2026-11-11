@@ -1,0 +1,308 @@
+{
+  "cases": 12,
+  "claim_limit": "Arithmetic and copied evidence only. Existing producer validations establish raw event attribution. No causal speedup or free-SM claim.",
+  "execution": {
+    "hostname": "nid007584",
+    "job": "3911397",
+    "partition": "debug"
+  },
+  "hardware_during_payload": {
+    "uccl-ordinary-nsys12": {
+      "all_80_windows_available": true,
+      "metrics": {
+        "Compute Warps in Flight [Throughput %]": {
+          "arithmetic_sample_mean_percent": 2.5924585318876914,
+          "count": 903405,
+          "max_percent": 70,
+          "median_percent": 2.0,
+          "min_percent": 1,
+          "p95_percent": 5.0
+        },
+        "SM Issue [Throughput %]": {
+          "arithmetic_sample_mean_percent": 1.754255289709488,
+          "count": 903405,
+          "max_percent": 38,
+          "median_percent": 1.0,
+          "min_percent": 1,
+          "p95_percent": 4.0
+        },
+        "SMs Active [Throughput %]": {
+          "arithmetic_sample_mean_percent": 10.93384030418251,
+          "count": 903405,
+          "max_percent": 98,
+          "median_percent": 9.0,
+          "min_percent": 1,
+          "p95_percent": 26.0
+        }
+      }
+    },
+    "uccl-ordinary-nsys20": {
+      "all_80_windows_available": true,
+      "metrics": {
+        "Compute Warps in Flight [Throughput %]": {
+          "arithmetic_sample_mean_percent": 3.5130441197223754,
+          "count": 935364,
+          "max_percent": 70,
+          "median_percent": 3.0,
+          "min_percent": 0,
+          "p95_percent": 6.0
+        },
+        "SM Issue [Throughput %]": {
+          "arithmetic_sample_mean_percent": 2.0566699167382967,
+          "count": 935364,
+          "max_percent": 38,
+          "median_percent": 1.0,
+          "min_percent": 0,
+          "p95_percent": 4.0
+        },
+        "SMs Active [Throughput %]": {
+          "arithmetic_sample_mean_percent": 15.783445802917367,
+          "count": 935364,
+          "max_percent": 98,
+          "median_percent": 15.0,
+          "min_percent": 0,
+          "p95_percent": 29.0
+        }
+      }
+    },
+    "uccl-ordinary-nsys32": {
+      "all_80_windows_available": true,
+      "metrics": {
+        "Compute Warps in Flight [Throughput %]": {
+          "arithmetic_sample_mean_percent": 4.371383368723312,
+          "count": 860884,
+          "max_percent": 71,
+          "median_percent": 3.0,
+          "min_percent": 1,
+          "p95_percent": 7.0
+        },
+        "SM Issue [Throughput %]": {
+          "arithmetic_sample_mean_percent": 2.4745575478229354,
+          "count": 860884,
+          "max_percent": 38,
+          "median_percent": 2.0,
+          "min_percent": 1,
+          "p95_percent": 6.0
+        },
+        "SMs Active [Throughput %]": {
+          "arithmetic_sample_mean_percent": 22.566213334200658,
+          "count": 860884,
+          "max_percent": 98,
+          "median_percent": 24.0,
+          "min_percent": 1,
+          "p95_percent": 38.0
+        }
+      }
+    },
+    "uccl-ordinary-nsys40": {
+      "all_80_windows_available": true,
+      "metrics": {
+        "Compute Warps in Flight [Throughput %]": {
+          "arithmetic_sample_mean_percent": 5.286678049572702,
+          "count": 683481,
+          "max_percent": 70,
+          "median_percent": 4.0,
+          "min_percent": 1,
+          "p95_percent": 10.0
+        },
+        "SM Issue [Throughput %]": {
+          "arithmetic_sample_mean_percent": 3.0041873877986367,
+          "count": 683481,
+          "max_percent": 38,
+          "median_percent": 2.0,
+          "min_percent": 1,
+          "p95_percent": 8.0
+        },
+        "SMs Active [Throughput %]": {
+          "arithmetic_sample_mean_percent": 27.783252204523606,
+          "count": 683481,
+          "max_percent": 98,
+          "median_percent": 30.0,
+          "min_percent": 1,
+          "p95_percent": 46.0
+        }
+      }
+    }
+  },
+  "hardware_windows": 320,
+  "input_hashes": {
+    "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa/ai/ep-overlap-summary-review/iteration-01/numerical_audit.py": "4bdd0fb0b529d63f0d0aa4f0d848df43a375cd0ec89fa77cdce8209d1b667b49",
+    "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa/runs/ep-overlap-auto-retry-20261110T165819Z-native-grouped-off-attempt1-posthoc/timing.json": "1f1b922323c0038547061195e650388139eb3670167213ae59ea0e048d7cf35b",
+    "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa/runs/ep-overlap-auto-retry-20261110T165819Z-native-grouped-torch-attempt1-posthoc/gpu_activity/summary.json": "3e0b99be7c7d3faa2e20451fbd5ab6abaa57455e7f28c80fa70098734342a3b3",
+    "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa/runs/ep-overlap-auto-retry-20261110T165819Z-native-grouped-torch-attempt1-posthoc/timing.json": "6c1005cf3b9c36e3e2f6cb09ed20f43aab485d46d3c217a41904156f7639b221",
+    "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa/runs/ep-overlap-auto-retry-20261110T165819Z-native-ordinary-off-attempt1-posthoc/timing.json": "e45a763bebce9db61ec6fe178ec7921d5ebea31e4a564cb6f0cae99e24ca934c",
+    "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa/runs/ep-overlap-auto-retry-20261110T165819Z-native-ordinary-torch-attempt1-posthoc/gpu_activity/summary.json": "e6c1c9a78c70a75e7f040ce4ff2f2b1cc7171f9f1c8f8c8a5fa99faf73cb81fc",
+    "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa/runs/ep-overlap-auto-retry-20261110T165819Z-native-ordinary-torch-attempt1-posthoc/timing.json": "378ca35a8e9054eb4c0ef21d6d858ca4068e14e4c9c91cccd7d00bc44bd8410e",
+    "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa/runs/ep-overlap-auto-retry-20261110T165819Z-uccl-grouped-off-attempt1-posthoc/timing.json": "0297fc8c1173ee684ae859b2655bae469529b641bd62aadf8996311069dfa01b",
+    "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa/runs/ep-overlap-auto-retry-20261110T165819Z-uccl-grouped-torch-attempt1-posthoc/gpu_activity/summary.json": "6e6bd35bfc453618ce83c880679895bc5336841fa31e0ec1eb97f5c003f752c0",
+    "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa/runs/ep-overlap-auto-retry-20261110T165819Z-uccl-grouped-torch-attempt1-posthoc/timing.json": "3c6d8b5180639011142d70bac689aeeee37c69f13cc0f189dc2843d29a9ce42c",
+    "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa/runs/ep-overlap-auto-retry-20261110T165819Z-uccl-ordinary-nsys12-attempt1-nsys-posthoc/metrics.json": "9186af7933131dabc126b008650ef9d4b055f9ca6bb5995318246ec34fe10815",
+    "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa/runs/ep-overlap-auto-retry-20261110T165819Z-uccl-ordinary-nsys12-attempt1-posthoc/timing.json": "729d1087d8eca5103182034942242211301e96a8fb6aeec999d0c8ba7edff0fd",
+    "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa/runs/ep-overlap-auto-retry-20261110T165819Z-uccl-ordinary-nsys20-attempt1-nsys-posthoc/metrics.json": "44006808201bc446628b0419505789a95368cf4ad73052931d30e0215f4fbdb4",
+    "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa/runs/ep-overlap-auto-retry-20261110T165819Z-uccl-ordinary-nsys20-attempt1-posthoc/timing.json": "2d718d09f2c6b995af46dd73c4181b4724b6741cafff5b55d8cd7c04673ad73a",
+    "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa/runs/ep-overlap-auto-retry-20261110T165819Z-uccl-ordinary-nsys32-attempt1-nsys-posthoc/metrics.json": "a3c90b25964f26e2a01598a7052b977ea0c3e191e4ca6d1b588225c7adc2b38c",
+    "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa/runs/ep-overlap-auto-retry-20261110T165819Z-uccl-ordinary-nsys32-attempt1-posthoc/timing.json": "ee96fb0c28a23fa90ffc916a43001c59a17ad0a6f83b8d9c6c2af2f7eeaf3199",
+    "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa/runs/ep-overlap-auto-retry-20261110T165819Z-uccl-ordinary-nsys40-attempt1-nsys-posthoc/metrics.json": "e03d96b33edc9a3025da4a7295cd932da5c9009e383f778cec8832e6885735a0",
+    "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa/runs/ep-overlap-auto-retry-20261110T165819Z-uccl-ordinary-nsys40-attempt1-posthoc/timing.json": "1ac5f09ab18a3c2297980ed1a60c25636d30664b2401ee82d8d267c89301492b",
+    "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa/runs/ep-overlap-auto-retry-20261110T165819Z-uccl-ordinary-off-attempt1-posthoc/timing.json": "2716110b068c63aaf7077ade3f144f2d0b7860ef6177509b73e50785eeb601db",
+    "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa/runs/ep-overlap-auto-retry-20261110T165819Z-uccl-ordinary-torch-attempt1-posthoc/gpu_activity/summary.json": "b213e571b9f6d9b6869b71f33967082a21808265d1be1440a129253cebddb3e6",
+    "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa/runs/ep-overlap-auto-retry-20261110T165819Z-uccl-ordinary-torch-attempt1-posthoc/timing.json": "3b45e472f5a9bf48b1ef8207bf6d9bb52789ef4bb2777c00e218b13957fd924b",
+    "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa/runs/ep-overlap-summary-20261110-final-attempt1/campaign_summary.json": "d322cc8e695141bb75b222cecd57d3d6457cf874d67dccca69816cacaf602445",
+    "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa/runs/ep-overlap-summary-20261110-final-attempt1/eight_cases.csv": "e610c23319bf02e6e9abce728af0e6a43662edaf91a4bf743b7d9afa958f7818",
+    "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa/runs/ep-overlap-summary-20261110-final-attempt1/evidence/accounting_utc.psv": "7774e5a1bcfc48aefb43dd5a908a01be5d7bd1421fbb0efb8944ad5d1c3f78ba",
+    "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa/runs/ep-overlap-summary-20261110-final-attempt1/optimizer_steps.csv": "4b9228c38756021bfe56a08942ec584e7f808deb6acfe01c5f3c76edb269d7e6",
+    "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa/runs/ep-overlap-summary-20261110-final-attempt1/sm_budgets.csv": "330eff187c588b913bac5ff91b4005a6d35c6d8d4e7d7b82f491703504e6d554",
+    "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa/runs/qwen-debug-results-20261105T0925Z-cpu-validation/campaign_acceptance.json": "8d282e5e3c07766983688fc6ede73d158d96a746fd8dec9d333257c7b415b208"
+  },
+  "measured_updates": 60,
+  "optimizer_updates": 120,
+  "original_input_prefix_sha256": "6ce98c488cce7b047566c233fe93567d3d49905432e9b1709d6b07a4fd0514cb",
+  "timing_results": {
+    "native-grouped-off": {
+      "measured_five": {
+        "aggregate_tokens_per_second": 3997.373551862439,
+        "count": 5,
+        "max_ms": 66184.6,
+        "mean_ms": 65579.06,
+        "median_ms": 65654.8,
+        "min_ms": 64672.4,
+        "sample_sd_ms": 634.9079208830226
+      },
+      "ten_timer_seconds": 678.5626
+    },
+    "native-grouped-torch": {
+      "measured_five": {
+        "aggregate_tokens_per_second": 3486.6250984231024,
+        "count": 5,
+        "max_ms": 75993.4,
+        "mean_ms": 75185.6,
+        "median_ms": 74973.3,
+        "min_ms": 74899.3,
+        "sample_sd_ms": 457.8761186172484
+      },
+      "ten_timer_seconds": 780.9098
+    },
+    "native-ordinary-off": {
+      "measured_five": {
+        "aggregate_tokens_per_second": 4196.432430528765,
+        "count": 5,
+        "max_ms": 62916.4,
+        "mean_ms": 62468.3,
+        "median_ms": 62533.4,
+        "min_ms": 61811.3,
+        "sample_sd_ms": 417.3225191623371
+      },
+      "ten_timer_seconds": 650.4003
+    },
+    "native-ordinary-torch": {
+      "measured_five": {
+        "aggregate_tokens_per_second": 3592.084435031593,
+        "count": 5,
+        "max_ms": 73460.8,
+        "mean_ms": 72978.24,
+        "median_ms": 72987.1,
+        "min_ms": 72451.9,
+        "sample_sd_ms": 436.88925141276
+      },
+      "ten_timer_seconds": 758.0483
+    },
+    "uccl-grouped-off": {
+      "measured_five": {
+        "aggregate_tokens_per_second": 25574.575275751253,
+        "count": 5,
+        "max_ms": 10420.9,
+        "mean_ms": 10250.18,
+        "median_ms": 10209.6,
+        "min_ms": 10138.0,
+        "sample_sd_ms": 119.63420079559181
+      },
+      "ten_timer_seconds": 140.85479999999998
+    },
+    "uccl-grouped-torch": {
+      "measured_five": {
+        "aggregate_tokens_per_second": 10098.837191384182,
+        "count": 5,
+        "max_ms": 29038.4,
+        "mean_ms": 25957.840000000004,
+        "median_ms": 25365.7,
+        "min_ms": 24544.4,
+        "sample_sd_ms": 1769.0271996213064
+      },
+      "ten_timer_seconds": 294.9365
+    },
+    "uccl-ordinary-nsys12": {
+      "measured_five": {
+        "aggregate_tokens_per_second": 11069.877588801748,
+        "count": 5,
+        "max_ms": 54064.4,
+        "mean_ms": 23680.840000000004,
+        "median_ms": 15531.7,
+        "min_ms": 15304.2,
+        "sample_sd_ms": 17028.17088218814
+      },
+      "ten_timer_seconds": 230.6384
+    },
+    "uccl-ordinary-nsys20": {
+      "measured_five": {
+        "aggregate_tokens_per_second": 10749.74801177394,
+        "count": 5,
+        "max_ms": 54768.5,
+        "mean_ms": 24386.06,
+        "median_ms": 16489.7,
+        "min_ms": 15887.0,
+        "sample_sd_ms": 17021.549792336773
+      },
+      "ten_timer_seconds": 238.2756
+    },
+    "uccl-ordinary-nsys32": {
+      "measured_five": {
+        "aggregate_tokens_per_second": 11097.263614196694,
+        "count": 5,
+        "max_ms": 54164.5,
+        "mean_ms": 23622.4,
+        "median_ms": 15715.9,
+        "min_ms": 15127.7,
+        "sample_sd_ms": 17104.181997394673
+      },
+      "ten_timer_seconds": 231.7481
+    },
+    "uccl-ordinary-nsys40": {
+      "measured_five": {
+        "aggregate_tokens_per_second": 12994.022067789552,
+        "count": 5,
+        "max_ms": 48751.8,
+        "mean_ms": 20174.2,
+        "median_ms": 12494.4,
+        "min_ms": 12373.1,
+        "sample_sd_ms": 16009.604097697109
+      },
+      "ten_timer_seconds": 198.5548
+    },
+    "uccl-ordinary-off": {
+      "measured_five": {
+        "aggregate_tokens_per_second": 18478.62098328392,
+        "count": 5,
+        "max_ms": 14363.2,
+        "mean_ms": 14186.34,
+        "median_ms": 14180.1,
+        "min_ms": 14051.1,
+        "sample_sd_ms": 112.68901011190064
+      },
+      "ten_timer_seconds": 175.89479999999998
+    },
+    "uccl-ordinary-torch": {
+      "measured_five": {
+        "aggregate_tokens_per_second": 8653.907733994278,
+        "count": 5,
+        "max_ms": 32490.2,
+        "mean_ms": 30291.98,
+        "median_ms": 29645.6,
+        "min_ms": 29541.0,
+        "sample_sd_ms": 1255.0251838110664
+      },
+      "ten_timer_seconds": 341.9536
+    }
+  },
+  "torch_captures": 640,
+  "valid_independent_numeric_audit": true
+}

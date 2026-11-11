@@ -1,0 +1,11 @@
+.runtime/
+core_*
+logs/
+setup/*.sqsh
+progress/
+checkpoint/
+analysis/
+dataset/
+runs/
+*.pyc
+jobs/

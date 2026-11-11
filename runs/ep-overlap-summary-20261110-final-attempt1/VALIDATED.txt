@@ -1,0 +1,2 @@
+valid_twelve_case_summary=true
+summary_sha256=d322cc8e695141bb75b222cecd57d3d6457cf874d67dccca69816cacaf602445

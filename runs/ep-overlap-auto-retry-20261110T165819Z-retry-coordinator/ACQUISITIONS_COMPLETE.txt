@@ -1,0 +1,6 @@
+retained_qualification_pilots=2
+new_qualification_pilots=2
+qualification_pilots=4
+full_acquisitions=12
+full_optimizer_updates=120
+comparison_accepted=false

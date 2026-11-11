@@ -1,0 +1,5 @@
+bounded_paired_sweep_complete=true
+accepted_pairs=20
+full_cases=40
+optimizer_updates=400
+final_report_accepted=false

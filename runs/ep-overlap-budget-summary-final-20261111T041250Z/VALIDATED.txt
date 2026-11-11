@@ -1,0 +1,3 @@
+valid_complete_adaptive_measurement_summary=true
+metrics_sha256=c8aa699baa1f73be1e40c5da7fe585100cccea23ccbf984ab8eeb2bbb6f59e7a
+research_conclusions_independently_accepted=false

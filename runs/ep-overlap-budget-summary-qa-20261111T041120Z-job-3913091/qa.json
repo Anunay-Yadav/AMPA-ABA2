@@ -1,0 +1,8 @@
+{
+  "job": "3913091",
+  "partition": "debug",
+  "qa_passed": true,
+  "summary_source_sha256": "2b170f107aabc07c1da917f37ff6ed8eb5c97fb2da03850e64f62037a4b2c5f6",
+  "tests": 7,
+  "training_executed": false
+}

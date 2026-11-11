@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "accepted_twelve_case_measurement_report": true,
+  "full_cases": 12,
+  "optimizer_updates": 120,
+  "measured_updates": 60,
+  "torch_rank_update_captures": 640,
+  "hardware_rank_update_windows": 320,
+  "acquisition_source_sha256": "ed74f4058652bb6f96dfa0496f70f7a888a150a2b2ee639df2d7edd499c8620a",
+  "summary_source_sha256": "470a76adb3287a4669d1d9824e1bc38f5cee0aaa3a7a21010af85d30df1ce8dd",
+  "acquisition_qa_job": "3908134",
+  "summary_qa_job": "3911359",
+  "summary_and_independent_audit_job": "3911397",
+  "summary_job_state": "COMPLETED",
+  "summary_job_exit_code": "0:0",
+  "summary_job_elapsed_seconds": 103,
+  "reviewed_artifacts": {
+    "docs/QWEN_EP_OVERLAP_AUDIT.md": "8d9f32f9757640c47dfeebefea51736f5969bb967783ca19cbbd4f7b80d29cd7",
+    "runs/ep-overlap-summary-20261110-final-attempt1/campaign_summary.json": "d322cc8e695141bb75b222cecd57d3d6457cf874d67dccca69816cacaf602445",
+    "runs/ep-overlap-summary-20261110-final-attempt1/independent_numerical_audit.json": "c4a12b026e1cdef873becb266c45c06837c5d8ea223e04975d9a938c6e2b61ed",
+    "runs/ep-overlap-summary-20261110-final-attempt1/optimizer_steps.csv": "4b9228c38756021bfe56a08942ec584e7f808deb6acfe01c5f3c76edb269d7e6",
+    "ai/ep-overlap-summary-review/iteration-01/REVIEW.md": "a7d3a1cfb94fe7a0c8cadc5d55ef92725a9fb19e068a4197a9159c40d9713471",
+    "ai/ep-overlap-summary-review/iteration-01/FINAL_REVIEWED_ARTIFACTS.sha256": "afa1785ab4d6f1a544e018e165dd25ff3afaff6c68e5f6835667148563030bae"
+  },
+  "claim_limits": [
+    "Descriptive timings under the recorded configurations, observers and independent placements.",
+    "Only budget20 has an unprofiled timing control in this twelve-case matrix.",
+    "Sampled device activity during payload includes concurrent compute and does not count free SMs.",
+    "No isolated causal speedup, production-optimal block budget, achieved occupancy, physical traffic or whole-session event-completeness claim."
+  ],
+  "separate_authorized_followup": "Adaptive unprofiled UCCL block-budget comparisons, tracked under ai/qwen-uccl-unprofiled-budget-sweep/iteration-01/STATUS.md."
+}

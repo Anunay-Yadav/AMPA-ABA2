@@ -1,0 +1,1351 @@
+{
+  "allowed_budgets": [
+    4,
+    6,
+    8,
+    10,
+    12,
+    14,
+    16,
+    18,
+    20,
+    22,
+    24,
+    26,
+    28,
+    30,
+    32,
+    34,
+    36,
+    38,
+    40,
+    42,
+    44,
+    46,
+    48,
+    50,
+    52,
+    54,
+    56
+  ],
+  "configuration_only": {
+    "ddp_delay_wgrad_compute": true,
+    "model_overlap_flags": {
+      "delay_wgrad_compute": true,
+      "ep_overlap_early_attn_memory_release": true,
+      "moe_shared_expert_overlap": false,
+      "moe_shortcut_parallel": false,
+      "overlap_dispatch_backward_with_experts_wgrad": false,
+      "overlap_moe_expert_parallel_comm": true
+    },
+    "weights_constructed": false
+  },
+  "device_launch_limits": {
+    "claim_limit": "Native launch resource bounds, not achieved active SMs, occupancy or performance.",
+    "major": 9,
+    "max_threads_per_block": 1024,
+    "multi_processor_count": 132,
+    "ordinal": 0,
+    "shared_memory_per_block_optin": 232448,
+    "supported_budgets": [
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20,
+      22,
+      24,
+      26,
+      28,
+      30,
+      32,
+      34,
+      36,
+      38,
+      40,
+      42,
+      44,
+      46,
+      48,
+      50,
+      52,
+      54,
+      56
+    ],
+    "warp_size": 32
+  },
+  "experiment_protocol": "ep_overlap_ordinary_off_budget_5_plus_5_v1",
+  "finished_utc": "2026-11-10T22:13:20.086459+00:00",
+  "focused_tests": [
+    {
+      "file": "test_ep_overlap_entrypoint.py",
+      "tests": 14
+    },
+    {
+      "file": "test_ep_overlap_budget_entrypoint.py",
+      "tests": 9
+    },
+    {
+      "file": "test_ep_overlap_budget_validate.py",
+      "tests": 14
+    }
+  ],
+  "hostname": "nid006907",
+  "job": "3911680",
+  "native_buffer_allocated": false,
+  "native_configs": {
+    "10": {
+      "combine": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 4,
+          "num_max_rdma_chunked_recv_tokens": 132,
+          "num_max_rdma_chunked_send_tokens": 12,
+          "num_sms": 10
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 35436416,
+        "rdma_buffer_size_hint": 32568704
+      },
+      "dispatch": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 36,
+          "num_max_rdma_chunked_recv_tokens": 140,
+          "num_max_rdma_chunked_send_tokens": 20,
+          "num_sms": 10
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 35436416,
+        "rdma_buffer_size_hint": 34542464
+      }
+    },
+    "12": {
+      "combine": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 4,
+          "num_max_rdma_chunked_recv_tokens": 132,
+          "num_max_rdma_chunked_send_tokens": 12,
+          "num_sms": 12
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 42523776,
+        "rdma_buffer_size_hint": 39082368
+      },
+      "dispatch": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 36,
+          "num_max_rdma_chunked_recv_tokens": 140,
+          "num_max_rdma_chunked_send_tokens": 20,
+          "num_sms": 12
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 42523776,
+        "rdma_buffer_size_hint": 41450880
+      }
+    },
+    "14": {
+      "combine": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 4,
+          "num_max_rdma_chunked_recv_tokens": 132,
+          "num_max_rdma_chunked_send_tokens": 12,
+          "num_sms": 14
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 49611008,
+        "rdma_buffer_size_hint": 45596160
+      },
+      "dispatch": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 36,
+          "num_max_rdma_chunked_recv_tokens": 140,
+          "num_max_rdma_chunked_send_tokens": 20,
+          "num_sms": 14
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 49611008,
+        "rdma_buffer_size_hint": 48359424
+      }
+    },
+    "16": {
+      "combine": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 4,
+          "num_max_rdma_chunked_recv_tokens": 132,
+          "num_max_rdma_chunked_send_tokens": 12,
+          "num_sms": 16
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 56698240,
+        "rdma_buffer_size_hint": 52109824
+      },
+      "dispatch": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 36,
+          "num_max_rdma_chunked_recv_tokens": 140,
+          "num_max_rdma_chunked_send_tokens": 20,
+          "num_sms": 16
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 56698240,
+        "rdma_buffer_size_hint": 55267840
+      }
+    },
+    "18": {
+      "combine": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 4,
+          "num_max_rdma_chunked_recv_tokens": 132,
+          "num_max_rdma_chunked_send_tokens": 12,
+          "num_sms": 18
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 63785600,
+        "rdma_buffer_size_hint": 58623616
+      },
+      "dispatch": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 36,
+          "num_max_rdma_chunked_recv_tokens": 140,
+          "num_max_rdma_chunked_send_tokens": 20,
+          "num_sms": 18
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 63785600,
+        "rdma_buffer_size_hint": 62176384
+      }
+    },
+    "20": {
+      "combine": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 4,
+          "num_max_rdma_chunked_recv_tokens": 132,
+          "num_max_rdma_chunked_send_tokens": 12,
+          "num_sms": 20
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 70872832,
+        "rdma_buffer_size_hint": 65137280
+      },
+      "dispatch": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 36,
+          "num_max_rdma_chunked_recv_tokens": 140,
+          "num_max_rdma_chunked_send_tokens": 20,
+          "num_sms": 20
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 70872832,
+        "rdma_buffer_size_hint": 69084800
+      }
+    },
+    "22": {
+      "combine": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 4,
+          "num_max_rdma_chunked_recv_tokens": 132,
+          "num_max_rdma_chunked_send_tokens": 12,
+          "num_sms": 22
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 77960192,
+        "rdma_buffer_size_hint": 71651072
+      },
+      "dispatch": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 36,
+          "num_max_rdma_chunked_recv_tokens": 140,
+          "num_max_rdma_chunked_send_tokens": 20,
+          "num_sms": 22
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 77960192,
+        "rdma_buffer_size_hint": 75993344
+      }
+    },
+    "24": {
+      "combine": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 4,
+          "num_max_rdma_chunked_recv_tokens": 132,
+          "num_max_rdma_chunked_send_tokens": 12,
+          "num_sms": 24
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 85047424,
+        "rdma_buffer_size_hint": 78164736
+      },
+      "dispatch": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 36,
+          "num_max_rdma_chunked_recv_tokens": 140,
+          "num_max_rdma_chunked_send_tokens": 20,
+          "num_sms": 24
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 85047424,
+        "rdma_buffer_size_hint": 82901760
+      }
+    },
+    "26": {
+      "combine": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 4,
+          "num_max_rdma_chunked_recv_tokens": 132,
+          "num_max_rdma_chunked_send_tokens": 12,
+          "num_sms": 26
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 92134656,
+        "rdma_buffer_size_hint": 84678528
+      },
+      "dispatch": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 36,
+          "num_max_rdma_chunked_recv_tokens": 140,
+          "num_max_rdma_chunked_send_tokens": 20,
+          "num_sms": 26
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 92134656,
+        "rdma_buffer_size_hint": 89810304
+      }
+    },
+    "28": {
+      "combine": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 4,
+          "num_max_rdma_chunked_recv_tokens": 132,
+          "num_max_rdma_chunked_send_tokens": 12,
+          "num_sms": 28
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 99222016,
+        "rdma_buffer_size_hint": 91192192
+      },
+      "dispatch": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 36,
+          "num_max_rdma_chunked_recv_tokens": 140,
+          "num_max_rdma_chunked_send_tokens": 20,
+          "num_sms": 28
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 99222016,
+        "rdma_buffer_size_hint": 96718720
+      }
+    },
+    "30": {
+      "combine": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 4,
+          "num_max_rdma_chunked_recv_tokens": 132,
+          "num_max_rdma_chunked_send_tokens": 12,
+          "num_sms": 30
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 106309248,
+        "rdma_buffer_size_hint": 97705984
+      },
+      "dispatch": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 36,
+          "num_max_rdma_chunked_recv_tokens": 140,
+          "num_max_rdma_chunked_send_tokens": 20,
+          "num_sms": 30
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 106309248,
+        "rdma_buffer_size_hint": 103627264
+      }
+    },
+    "32": {
+      "combine": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 4,
+          "num_max_rdma_chunked_recv_tokens": 132,
+          "num_max_rdma_chunked_send_tokens": 12,
+          "num_sms": 32
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 113396480,
+        "rdma_buffer_size_hint": 104219648
+      },
+      "dispatch": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 36,
+          "num_max_rdma_chunked_recv_tokens": 140,
+          "num_max_rdma_chunked_send_tokens": 20,
+          "num_sms": 32
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 113396480,
+        "rdma_buffer_size_hint": 110535680
+      }
+    },
+    "34": {
+      "combine": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 4,
+          "num_max_rdma_chunked_recv_tokens": 132,
+          "num_max_rdma_chunked_send_tokens": 12,
+          "num_sms": 34
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 120483840,
+        "rdma_buffer_size_hint": 110733440
+      },
+      "dispatch": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 36,
+          "num_max_rdma_chunked_recv_tokens": 140,
+          "num_max_rdma_chunked_send_tokens": 20,
+          "num_sms": 34
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 120483840,
+        "rdma_buffer_size_hint": 117444224
+      }
+    },
+    "36": {
+      "combine": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 4,
+          "num_max_rdma_chunked_recv_tokens": 132,
+          "num_max_rdma_chunked_send_tokens": 12,
+          "num_sms": 36
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 127571072,
+        "rdma_buffer_size_hint": 117247104
+      },
+      "dispatch": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 36,
+          "num_max_rdma_chunked_recv_tokens": 140,
+          "num_max_rdma_chunked_send_tokens": 20,
+          "num_sms": 36
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 127571072,
+        "rdma_buffer_size_hint": 124352640
+      }
+    },
+    "38": {
+      "combine": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 4,
+          "num_max_rdma_chunked_recv_tokens": 132,
+          "num_max_rdma_chunked_send_tokens": 12,
+          "num_sms": 38
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 134658432,
+        "rdma_buffer_size_hint": 123760896
+      },
+      "dispatch": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 36,
+          "num_max_rdma_chunked_recv_tokens": 140,
+          "num_max_rdma_chunked_send_tokens": 20,
+          "num_sms": 38
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 134658432,
+        "rdma_buffer_size_hint": 131261184
+      }
+    },
+    "4": {
+      "combine": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 4,
+          "num_max_rdma_chunked_recv_tokens": 132,
+          "num_max_rdma_chunked_send_tokens": 12,
+          "num_sms": 4
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 14174592,
+        "rdma_buffer_size_hint": 13027456
+      },
+      "dispatch": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 36,
+          "num_max_rdma_chunked_recv_tokens": 140,
+          "num_max_rdma_chunked_send_tokens": 20,
+          "num_sms": 4
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 14174592,
+        "rdma_buffer_size_hint": 13816960
+      }
+    },
+    "40": {
+      "combine": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 4,
+          "num_max_rdma_chunked_recv_tokens": 132,
+          "num_max_rdma_chunked_send_tokens": 12,
+          "num_sms": 40
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 141745664,
+        "rdma_buffer_size_hint": 130274560
+      },
+      "dispatch": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 36,
+          "num_max_rdma_chunked_recv_tokens": 140,
+          "num_max_rdma_chunked_send_tokens": 20,
+          "num_sms": 40
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 141745664,
+        "rdma_buffer_size_hint": 138169600
+      }
+    },
+    "42": {
+      "combine": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 4,
+          "num_max_rdma_chunked_recv_tokens": 132,
+          "num_max_rdma_chunked_send_tokens": 12,
+          "num_sms": 42
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 148832896,
+        "rdma_buffer_size_hint": 136788352
+      },
+      "dispatch": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 36,
+          "num_max_rdma_chunked_recv_tokens": 140,
+          "num_max_rdma_chunked_send_tokens": 20,
+          "num_sms": 42
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 148832896,
+        "rdma_buffer_size_hint": 145078144
+      }
+    },
+    "44": {
+      "combine": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 4,
+          "num_max_rdma_chunked_recv_tokens": 132,
+          "num_max_rdma_chunked_send_tokens": 12,
+          "num_sms": 44
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 155920256,
+        "rdma_buffer_size_hint": 143302016
+      },
+      "dispatch": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 36,
+          "num_max_rdma_chunked_recv_tokens": 140,
+          "num_max_rdma_chunked_send_tokens": 20,
+          "num_sms": 44
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 155920256,
+        "rdma_buffer_size_hint": 151986560
+      }
+    },
+    "46": {
+      "combine": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 4,
+          "num_max_rdma_chunked_recv_tokens": 132,
+          "num_max_rdma_chunked_send_tokens": 12,
+          "num_sms": 46
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 163007488,
+        "rdma_buffer_size_hint": 149815808
+      },
+      "dispatch": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 36,
+          "num_max_rdma_chunked_recv_tokens": 140,
+          "num_max_rdma_chunked_send_tokens": 20,
+          "num_sms": 46
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 163007488,
+        "rdma_buffer_size_hint": 158895104
+      }
+    },
+    "48": {
+      "combine": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 4,
+          "num_max_rdma_chunked_recv_tokens": 132,
+          "num_max_rdma_chunked_send_tokens": 12,
+          "num_sms": 48
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 170094720,
+        "rdma_buffer_size_hint": 156329472
+      },
+      "dispatch": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 36,
+          "num_max_rdma_chunked_recv_tokens": 140,
+          "num_max_rdma_chunked_send_tokens": 20,
+          "num_sms": 48
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 170094720,
+        "rdma_buffer_size_hint": 165803520
+      }
+    },
+    "50": {
+      "combine": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 4,
+          "num_max_rdma_chunked_recv_tokens": 132,
+          "num_max_rdma_chunked_send_tokens": 12,
+          "num_sms": 50
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 177182080,
+        "rdma_buffer_size_hint": 162843264
+      },
+      "dispatch": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 36,
+          "num_max_rdma_chunked_recv_tokens": 140,
+          "num_max_rdma_chunked_send_tokens": 20,
+          "num_sms": 50
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 177182080,
+        "rdma_buffer_size_hint": 172712064
+      }
+    },
+    "52": {
+      "combine": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 4,
+          "num_max_rdma_chunked_recv_tokens": 132,
+          "num_max_rdma_chunked_send_tokens": 12,
+          "num_sms": 52
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 184269312,
+        "rdma_buffer_size_hint": 169356928
+      },
+      "dispatch": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 36,
+          "num_max_rdma_chunked_recv_tokens": 140,
+          "num_max_rdma_chunked_send_tokens": 20,
+          "num_sms": 52
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 184269312,
+        "rdma_buffer_size_hint": 179620480
+      }
+    },
+    "54": {
+      "combine": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 4,
+          "num_max_rdma_chunked_recv_tokens": 132,
+          "num_max_rdma_chunked_send_tokens": 12,
+          "num_sms": 54
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 191356672,
+        "rdma_buffer_size_hint": 175870720
+      },
+      "dispatch": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 36,
+          "num_max_rdma_chunked_recv_tokens": 140,
+          "num_max_rdma_chunked_send_tokens": 20,
+          "num_sms": 54
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 191356672,
+        "rdma_buffer_size_hint": 186529024
+      }
+    },
+    "56": {
+      "combine": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 4,
+          "num_max_rdma_chunked_recv_tokens": 132,
+          "num_max_rdma_chunked_send_tokens": 12,
+          "num_sms": 56
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 198443904,
+        "rdma_buffer_size_hint": 182384384
+      },
+      "dispatch": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 36,
+          "num_max_rdma_chunked_recv_tokens": 140,
+          "num_max_rdma_chunked_send_tokens": 20,
+          "num_sms": 56
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 198443904,
+        "rdma_buffer_size_hint": 193437440
+      }
+    },
+    "6": {
+      "combine": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 4,
+          "num_max_rdma_chunked_recv_tokens": 132,
+          "num_max_rdma_chunked_send_tokens": 12,
+          "num_sms": 6
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 21261952,
+        "rdma_buffer_size_hint": 19541248
+      },
+      "dispatch": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 36,
+          "num_max_rdma_chunked_recv_tokens": 140,
+          "num_max_rdma_chunked_send_tokens": 20,
+          "num_sms": 6
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 21261952,
+        "rdma_buffer_size_hint": 20725504
+      }
+    },
+    "8": {
+      "combine": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 4,
+          "num_max_rdma_chunked_recv_tokens": 132,
+          "num_max_rdma_chunked_send_tokens": 12,
+          "num_sms": 8
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 28349184,
+        "rdma_buffer_size_hint": 26054912
+      },
+      "dispatch": {
+        "config": {
+          "num_max_nvl_chunked_recv_tokens": 288,
+          "num_max_nvl_chunked_send_tokens": 36,
+          "num_max_rdma_chunked_recv_tokens": 140,
+          "num_max_rdma_chunked_send_tokens": 20,
+          "num_sms": 8
+        },
+        "ep_ranks": 16,
+        "hidden_bytes": 4096,
+        "nvl_buffer_size_hint": 28349184,
+        "rdma_buffer_size_hint": 27633920
+      }
+    }
+  },
+  "native_identity": {
+    "binary_sha256": "110d27746db1c326c0e6216f413c5c45cf7d26eca83037b3874241c73abb8d36",
+    "extension": "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa/runs/uccl-ep-owned-build-20261101T1713Z/site/uccl/ep.abi3.so",
+    "native_buffer_allocated": false,
+    "restored_budget": 20,
+    "source_identity": {
+      "base_revision": "c8fd14e93f2106b69a0d30e0f78c12a52e07a181",
+      "modified_files": {
+        "ep/bench/utils.py": "064e0dd5020507ebf6b4126af73276a9de85b02f563418b1d2b1756f9d6cff12",
+        "ep/include/uccl_proxy.hpp": "d8b823357b3122974294be3c5ea4c3b1c0d374d7854d780768ce5e8bce35426e",
+        "ep/src/uccl_ep.cc": "a82139ac19227d30b2b9b09b2319261301ef60edb7ff9fbceeaeb8362fa267f3",
+        "ep/src/uccl_proxy.cpp": "5ad129741365f363235073702ba4a66cdb7af9a6f20b6c17dc5561febbacc7db"
+      },
+      "patch_sha256": "749a28bdb82d25ba92bace55ad6d99bafc1075280bb5466e12f378f5a53a21b2",
+      "source_diff_sha256": "ad77e2a41e4f3f2079afdbba94ec14de42916e7b9a15828e12296aa41ef09d29"
+    }
+  },
+  "native_launch_requirements": {
+    "10": {
+      "channels": 5,
+      "notify_dynamic_shared_bytes": 40960,
+      "notify_threads": 160,
+      "payload_blocks": 10
+    },
+    "12": {
+      "channels": 6,
+      "notify_dynamic_shared_bytes": 49152,
+      "notify_threads": 192,
+      "payload_blocks": 12
+    },
+    "14": {
+      "channels": 7,
+      "notify_dynamic_shared_bytes": 57344,
+      "notify_threads": 224,
+      "payload_blocks": 14
+    },
+    "16": {
+      "channels": 8,
+      "notify_dynamic_shared_bytes": 65536,
+      "notify_threads": 256,
+      "payload_blocks": 16
+    },
+    "18": {
+      "channels": 9,
+      "notify_dynamic_shared_bytes": 73728,
+      "notify_threads": 288,
+      "payload_blocks": 18
+    },
+    "20": {
+      "channels": 10,
+      "notify_dynamic_shared_bytes": 81920,
+      "notify_threads": 320,
+      "payload_blocks": 20
+    },
+    "22": {
+      "channels": 11,
+      "notify_dynamic_shared_bytes": 90112,
+      "notify_threads": 352,
+      "payload_blocks": 22
+    },
+    "24": {
+      "channels": 12,
+      "notify_dynamic_shared_bytes": 98304,
+      "notify_threads": 384,
+      "payload_blocks": 24
+    },
+    "26": {
+      "channels": 13,
+      "notify_dynamic_shared_bytes": 106496,
+      "notify_threads": 416,
+      "payload_blocks": 26
+    },
+    "28": {
+      "channels": 14,
+      "notify_dynamic_shared_bytes": 114688,
+      "notify_threads": 448,
+      "payload_blocks": 28
+    },
+    "30": {
+      "channels": 15,
+      "notify_dynamic_shared_bytes": 122880,
+      "notify_threads": 480,
+      "payload_blocks": 30
+    },
+    "32": {
+      "channels": 16,
+      "notify_dynamic_shared_bytes": 131072,
+      "notify_threads": 512,
+      "payload_blocks": 32
+    },
+    "34": {
+      "channels": 17,
+      "notify_dynamic_shared_bytes": 139264,
+      "notify_threads": 544,
+      "payload_blocks": 34
+    },
+    "36": {
+      "channels": 18,
+      "notify_dynamic_shared_bytes": 147456,
+      "notify_threads": 576,
+      "payload_blocks": 36
+    },
+    "38": {
+      "channels": 19,
+      "notify_dynamic_shared_bytes": 155648,
+      "notify_threads": 608,
+      "payload_blocks": 38
+    },
+    "4": {
+      "channels": 2,
+      "notify_dynamic_shared_bytes": 32768,
+      "notify_threads": 128,
+      "payload_blocks": 4
+    },
+    "40": {
+      "channels": 20,
+      "notify_dynamic_shared_bytes": 163840,
+      "notify_threads": 640,
+      "payload_blocks": 40
+    },
+    "42": {
+      "channels": 21,
+      "notify_dynamic_shared_bytes": 172032,
+      "notify_threads": 672,
+      "payload_blocks": 42
+    },
+    "44": {
+      "channels": 22,
+      "notify_dynamic_shared_bytes": 180224,
+      "notify_threads": 704,
+      "payload_blocks": 44
+    },
+    "46": {
+      "channels": 23,
+      "notify_dynamic_shared_bytes": 188416,
+      "notify_threads": 736,
+      "payload_blocks": 46
+    },
+    "48": {
+      "channels": 24,
+      "notify_dynamic_shared_bytes": 196608,
+      "notify_threads": 768,
+      "payload_blocks": 48
+    },
+    "50": {
+      "channels": 25,
+      "notify_dynamic_shared_bytes": 204800,
+      "notify_threads": 800,
+      "payload_blocks": 50
+    },
+    "52": {
+      "channels": 26,
+      "notify_dynamic_shared_bytes": 212992,
+      "notify_threads": 832,
+      "payload_blocks": 52
+    },
+    "54": {
+      "channels": 27,
+      "notify_dynamic_shared_bytes": 221184,
+      "notify_threads": 864,
+      "payload_blocks": 54
+    },
+    "56": {
+      "channels": 28,
+      "notify_dynamic_shared_bytes": 229376,
+      "notify_threads": 896,
+      "payload_blocks": 56
+    },
+    "6": {
+      "channels": 3,
+      "notify_dynamic_shared_bytes": 32768,
+      "notify_threads": 128,
+      "payload_blocks": 6
+    },
+    "8": {
+      "channels": 4,
+      "notify_dynamic_shared_bytes": 32768,
+      "notify_threads": 128,
+      "payload_blocks": 8
+    }
+  },
+  "native_limit_sources": {
+    "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa/runs/uccl-ep-owned-build-20261101T1713Z/uccl/ep/deep_ep_wrapper/deep_ep/buffer.py": "fd513ce269bfa27cf40a92645f130ce6e54920358ac36c97211978b572315f54",
+    "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa/runs/uccl-ep-owned-build-20261101T1713Z/uccl/ep/include/ep_config.hpp": "9a6a6bf982f13490102dd1d148f261e7c1594acf392011bc594837ee96412f5b",
+    "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa/runs/uccl-ep-owned-build-20261101T1713Z/uccl/ep/include/ep_launch.cuh": "cec764cca664a878406f39e6d1c8321ebc5a71121fbea8af9628b0fb58ec3e73",
+    "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa/runs/uccl-ep-owned-build-20261101T1713Z/uccl/ep/include/ep_utils.cuh": "ce9187e24923543eabed410a8f40baff22717fb92861c244a5ba5d0032b3e609",
+    "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa/runs/uccl-ep-owned-build-20261101T1713Z/uccl/ep/include/uccl_ibgda.cuh": "771224406782105d621632980f09770b9ad8a0064b23cee48ad9f8f569d8b829",
+    "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa/runs/uccl-ep-owned-build-20261101T1713Z/uccl/ep/src/internode.cu": "df7f95096318df0611fa568634a8352ff65b8a3bf64a53addca38963bbbf65eb"
+  },
+  "next_unsupported_upper_budget": {
+    "budget": 58,
+    "channels": 29,
+    "claim_limit": "The supported range derives from actual selected-device resource limits. Config construction alone does not qualify kernel execution.",
+    "fits_actual_optin_shared_limit": false,
+    "fits_actual_thread_limit": true,
+    "notify_dynamic_shared_bytes": 237568,
+    "notify_threads": 928,
+    "payload_blocks": 58
+  },
+  "original_qa_reference": {
+    "path": "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa/runs/ep-overlap-debug-ddp-qa-20261110T111031Z/preflight.json",
+    "repeated": false,
+    "sha256": "1688f56b52adb21324361e972233541f1a18f34a1a28ea014d2d2e4992ee25f0",
+    "tests": 72
+  },
+  "paired_launcher_stdin_fixture": {
+    "claim_limit": "Both actual launcher orders with test doubles only. These are not training or performance results.",
+    "completed_fixture_cases": 4,
+    "native_training_executed": false,
+    "orders_checked": [
+      "candidate-first",
+      "reference-first"
+    ],
+    "pairs": [
+      {
+        "claim_limit": "Actual launcher control flow with explicit test doubles, not training or measurement evidence.",
+        "completed_case_ids": [
+          "stdin-fixture-candidate-first-candidate-b12",
+          "stdin-fixture-candidate-first-reference-b20"
+        ],
+        "completed_legs": 2,
+        "native_training_executed": false,
+        "order": "candidate-first",
+        "pair_id": "stdin-fixture-candidate-first",
+        "production_launcher_sha256": "4698552748c4e0cc2aa012cc0c3506e366cf0c0e406db4de59101b69e5efae9a",
+        "real_scheduler_commands_executed": false,
+        "stub_srun_calls": [
+          [
+            "candidate",
+            "--node"
+          ],
+          [
+            "candidate",
+            "--validate"
+          ],
+          [
+            "reference",
+            "--node"
+          ],
+          [
+            "reference",
+            "--validate"
+          ]
+        ],
+        "unsafe_probe_calls": 1,
+        "valid_actual_pair_launcher_stdin_fixture": true
+      },
+      {
+        "claim_limit": "Actual launcher control flow with explicit test doubles, not training or measurement evidence.",
+        "completed_case_ids": [
+          "stdin-fixture-reference-first-candidate-b12",
+          "stdin-fixture-reference-first-reference-b20"
+        ],
+        "completed_legs": 2,
+        "native_training_executed": false,
+        "order": "reference-first",
+        "pair_id": "stdin-fixture-reference-first",
+        "production_launcher_sha256": "4698552748c4e0cc2aa012cc0c3506e366cf0c0e406db4de59101b69e5efae9a",
+        "real_scheduler_commands_executed": false,
+        "stub_srun_calls": [
+          [
+            "reference",
+            "--node"
+          ],
+          [
+            "reference",
+            "--validate"
+          ],
+          [
+            "candidate",
+            "--node"
+          ],
+          [
+            "candidate",
+            "--validate"
+          ]
+        ],
+        "unsafe_probe_calls": 1,
+        "valid_actual_pair_launcher_stdin_fixture": true
+      }
+    ],
+    "pairs_checked": 2,
+    "real_scheduler_commands_executed": false,
+    "stub_srun_call_count": 8,
+    "valid_actual_pair_launcher_stdin_fixture": true
+  },
+  "partition": "debug",
+  "python": "/opt/venvs/megatron-bridge/bin/python",
+  "schema_version": 1,
+  "source_manifest": {
+    "files": {
+      "ai/ep-overlap-summary-review/iteration-01/numerical_audit.py": "4bdd0fb0b529d63f0d0aa4f0d848df43a375cd0ec89fa77cdce8209d1b667b49",
+      "ai/qwen-gpu-communication-metrics/iteration-01/extract_launch_metrics.py": "334f7a0b60b69e5b028ff54931485f04eab2deb863cceacd33ef3473b36d9247",
+      "ai/qwen-uccl-block-sweep/iteration-01/HARDWARE_METRIC_SCHEMA.md": "c882b9f6f167c32ee445c7df477bb5b468b7854539b88604855b835be0fbdbe5",
+      "ai/qwen-uccl-ep-comparison/iteration-01/02-implement/uccl-borrowed-scratch.patch": "749a28bdb82d25ba92bace55ad6d99bafc1075280bb5466e12f378f5a53a21b2",
+      "analysis/accept_uccl_pilot.py": "90223df5c1287961b3571f308ded889c4c5e6dd647b464ef98c100a358d340e3",
+      "analysis/aggregate_deep_trace.py": "51976f065fbbd3a723ba340ea14cdcccdf25fd02c32b32fefb0bca61c6c56fc7",
+      "analysis/aggregate_run.py": "f2e8ce450ae104f937dc799a35b3f6784e9d4d8cfa3066452b8a478e0e2fefe1",
+      "analysis/analyze_all_step_trace.py": "b18035093a090bb5e587db27c8229bf0979fe2d2c6751eca48a88e52ff2dbf70",
+      "analysis/check_ep16_smoke.py": "d42d1e6743100e3c9066feee94019fb68ef2d0258a9cb2930dd0cedb5843b563",
+      "analysis/compare_all_step_profiles.py": "e662f7976caa1a84a51f4965bbd26f53c3295f3c49077d0d7ae80ebe71589388",
+      "analysis/compare_deep_trace_overhead.py": "75aa0ee35fc3dcd01412c6112bb38fc23530923aaf23d0615a5e5efb2eba4e6e",
+      "analysis/compare_ep16_recovery.py": "d37e5dfa15d0ed26e758afa07dea8165c958b068f7bcffefeb5badf2957c2d66",
+      "analysis/compare_profile_overhead.py": "1bc6cec18a6f52bb9d377362044e9aadec5fcc75983495a537c71be53b367849",
+      "analysis/compare_uccl_profiles.py": "d954a32c7d3145ae0f35145b02d5b974e64c3578c4bd8bce4dc99dad7abf1e58",
+      "analysis/ep_overlap_budget_compare.py": "8fdea2223849ac4cfb31609729f87596acddc21503105fef8154a57026de37c1",
+      "analysis/ep_overlap_gpu_activity.py": "6ff925382811cb71f714f6da1355816d0bcc08826f347c92b5b56a7dcfc8df57",
+      "analysis/extract_step_timing.py": "cbb6c9eca6387b0e026d148bff4ae536041cce346a82492c5e2698c9564784d9",
+      "analysis/inspect_uccl_trace.py": "66a4373efd99553f312ea31d5724777c68186c1cfe0cd9dd56967b8eb401de7f",
+      "analysis/qwen_debug_independent_audit.py": "d9c719e04f7593bde31859e7e7ceca11c0ef058d038efda8372795e5847a4110",
+      "analysis/qwen_debug_profile_phases.py": "e676a4cde64e7e1dc4c9c4ce9fa3fc112f205f6dd1225d01b7fb630df81fa189",
+      "analysis/qwen_debug_results.py": "b4f419b6f9a812866a5263dd256fc854c6bc56252b2a3796ad41253254c74813",
+      "analysis/summarize_training_evidence.py": "efb05fb70ec227847d8ecf845f53bc9cd5042599cd1f81f885e6480cf2a40ff7",
+      "analysis/uccl_budget_hardware_compare.py": "00ad2ca9f097f3adb8f959f340e0c7a96345dbcc292d7b90111480902bf17616",
+      "analysis/uccl_budget_hardware_metrics.py": "f43fb3fc18fb43cf278a61c8aba47eaab192525fe1c20ec3434316de1367b45c",
+      "analysis/uccl_budget_sweep_delivery.py": "7a8e6423b810f71f6da6b7ea2d0f2cabcb093e0db79654c8238439e4af7bffed",
+      "analysis/validate_ep16_received_routes.py": "6f400af38ee0a399a409038923844f64991ade89975983d8a13740e1c5ecf88e",
+      "analysis/validate_torch_trace.py": "6587bdaa5de43cf4de022964cec5767374cc620ae688ef77686850c17d75a93f",
+      "configs/model/qwen3_30b_a3b_base.json": "c0d28743fcda449169b3ad63f0ff216a3f6c5414efbbe8fc76da623abbf2028e",
+      "jobs/analysis/ep_overlap_budget_posthoc.sbatch": "ffff8473df4fa546ae5a67647d9ce89ae5a6af4d01106a6b89ce8ccd38b70737",
+      "jobs/analysis/ep_overlap_campaign_summary.sbatch": "0534595cc3c3497bb59f5ee60f4e97f4a381620b9a841bc79d64fe72df31526f",
+      "jobs/analysis/ep_overlap_posthoc.sbatch": "e0ea38edc052c26edd1940efbd090286c6bb8548453872f59e8a4902928c3e4b",
+      "jobs/analysis/uccl_budget_sweep_posthoc.sbatch": "bf96fd375bda83b85b9c68a8bea50d357c6d6ccc43be5e73eb401ea2a266dde0",
+      "jobs/analysis/uccl_debug_validate.sbatch": "9225d184c15124bfdf9645aef6464abd83841f19b2d82e178e79126ad3289103",
+      "jobs/analysis/uccl_ep_validate_profiles.sbatch": "814e9c352d628d040ee56db35881a1e0c2a5bc0b86cd9d072be05f950eba8429",
+      "jobs/checkpoint/import_qwen3_30b_a3b_base_c0.sbatch": "8ec99970d58c59ef5c1cf332fbd553b5f4e8b1061593a637dbecc18532e8104e",
+      "jobs/checkpoint/materialize_qwen3_30b_a3b_base_hf.sbatch": "81173d3b43b6eaf2aedfe03c3b12605e3df05f1367e82a33908d6ed6db88d4d2",
+      "jobs/coordination/ep_overlap_campaign.sh": "59d0254fc3cb2448e604d26001806003b8e453c864ec94eb847183844fca6e8e",
+      "jobs/dataset/materialize_qwen3_30b_a3b_base_mix.sbatch": "e1e44f238526d7e5e7b89e5a3e854d663d6df17b05a401d7c9c22dfac70741c5",
+      "jobs/dataset/prepare_qwen3_30b_a3b_base_mix_cache.sbatch": "d0d632d6cc4c979935f75ee37c94254f4deea27ff1e172bc5dc802221031d13e",
+      "jobs/dataset/probe_qwen3_30b_a3b_base_mix_cache_hit.sbatch": "d9666dc92a0cd4f5652ac6fb988651c81c110d6beacbf373d423880f3d2998a5",
+      "jobs/dataset/promote_qwen3_30b_a3b_base_mix_manifest.sbatch": "cb44d7570f9b5edf051794e776bf63b515797f646ad8f87264dee0645807ff61",
+      "jobs/dataset/validate_qwen3_30b_a3b_base_mix.sbatch": "44d1aaf1cb5c42b5521eaa70d1dffc928f351b8d7da7243e2c83abdd5402aa06",
+      "jobs/dataset/validate_qwen3_30b_a3b_base_mix_cache.sbatch": "f9cdf6267b6c4f851df9f9446a3371f7f8cacf20ec3bf2b27d650bf6233b2aca",
+      "jobs/smoke/ep16_profile_preflight.sbatch": "5ecda5207e28715d90e23872c74f03a59ee7016355a9021d0cf3beacd93ea2e2",
+      "jobs/smoke/ep_overlap_budget_preflight.sbatch": "cbd032d9a886144469b5ac6af75512983a2e13f6df7814bfdc7fdf665a2daba0",
+      "jobs/smoke/ep_overlap_preflight.sbatch": "95747ce8702af5b760d15a7e73e9bdfa19d3da47c1a8778ba7f21e7acaba9703",
+      "jobs/smoke/uccl_budget_runtime_checks.sbatch": "6839225a31dd0a896a1ae309a86ba2f9784369c879796ec1ee0ef4a495d906a4",
+      "jobs/smoke/uccl_debug_checks.sbatch": "dc9448ba3ca1881f779acb0f8e06e55b40f36e3f22a683a446d23e9bb2285bb2",
+      "jobs/smoke/uccl_debug_reuse_checks.sbatch": "7ab8fa0fb6958b25997eb882dc4c7350b733a4008071a2664ef37d96b77d8d46",
+      "jobs/smoke/uccl_ep_build.sbatch": "fb8007f23c0852ec376bf73e10c738bcec346cec649630b1c84856b0d0a696f7",
+      "jobs/smoke/uccl_ep_dispatch_smoke.sbatch": "9033451a271aeeb976ba3e4895763e47713423f71d402c5941b98ce49dfebe4b",
+      "jobs/smoke/uccl_ep_verify_build.sbatch": "0ec61167d4cf541915aa788085c58bf0fbd0321333429898250e7c074e27cc15",
+      "jobs/smoke/uccl_nsight_capabilities.sbatch": "e63ce79e2cdf51c7566e649545510c17356e4560f3aaad422f72205ebad12f28",
+      "jobs/smoke/uccl_nsight_cuda132_setup.sbatch": "8cb6effd2bf700ba0147fb43265a54943444424c58d148c57bf311eb2657d947",
+      "jobs/training/cp2_all_steps_group_routing.sbatch": "3ac07ea9854edbf6a2eb9ee4efddd799fc074d237f5771838bb1a0e95ce9f8dd",
+      "jobs/training/cp2_torchprof_pair.sbatch": "054e5b4b5c821457c4e29d6ef97545b9a2069a2724b82237d57d89f3cba00e3e",
+      "jobs/training/ep16_all_steps_group_routing.sbatch": "d88bd04cead50d837bf9b4116b871e637defd06a703c0904661033bbf1cbf486",
+      "jobs/training/ep16_all_steps_reviewed.sbatch": "d62cca8b0f9f71ffa7f67b688ef4ade7319d24572759dcc7475ab330cd8da196",
+      "jobs/training/ep_overlap_budget_pair.sbatch": "4698552748c4e0cc2aa012cc0c3506e366cf0c0e406db4de59101b69e5efae9a",
+      "jobs/training/ep_overlap_budget_worker.sh": "09784e8b5a0cd94c70e96de7aa5a9770ad7cece39344d86aa9b27be3298161c7",
+      "jobs/training/ep_overlap_case.sbatch": "4a65a9238cd1ce285c930c9a2853e4be24d707dfe547bd16d33079ed5c900f59",
+      "jobs/training/ep_overlap_checked.sbatch": "9a03b64988f5193967dea9ec318a42b74c498d045510346bf902938b8843d6c3",
+      "jobs/training/ep_overlap_posthoc.sh": "db9ec28962c37f78db55ad53fc0701c097145c6d495f785e1533dcc68f0c1f2d",
+      "jobs/training/ep_overlap_worker.sh": "953fbe390aa2bb47635a8a2e1f324832a34fe56b6f98bb95d497642eb864ba6b",
+      "jobs/training/qwen3_30b_a3b_base_cp2_paired_overhead.sbatch": "63dd2fb8db12a0ee15adea4537f5a36017e59d8268b58f81fd44c5b849949baf",
+      "jobs/training/qwen3_30b_a3b_base_ep8_profile.sbatch": "3fce405a1633a1110f79aabae5ac973aa63a69392cd1e4d4188115ca54e71a8d",
+      "jobs/training/qwen3_all_steps_profile.sbatch": "5f898282e0ed110e5c4a9dd764f310057029df1acdde77ea3859cf2e10eb0ea3",
+      "jobs/training/qwen3_ep16_all_steps.sbatch": "3e4f4b019b36c260f7529e76f914b85363774a62c6150b766f007336e51c9f2b",
+      "jobs/training/qwen3_uccl_debug_reuse_worker.sh": "a0db4110d2abfc9b58923ae17be813e6bbe1e88d7a20576db9b04e10b18b243c",
+      "jobs/training/qwen3_uccl_debug_worker.sh": "f052835cc6cb9ef75912ca19f87fbe8a4cf8602346d8bdddbf9b5e3ff04cef71",
+      "jobs/training/qwen3_uccl_ep_worker.sh": "00476e59ce491f28633775c9241f28315bdbc0e9f6247c1b9882c65f2a6c506a",
+      "jobs/training/uccl_budget_sweep.sbatch": "8572b63d173cb6747175dca0d19107466e54d2bd5effe0d75d691e05ee73b2b5",
+      "jobs/training/uccl_budget_sweep_coordinator.sh": "6ec73e164c3d06de8bc9b15ac7cfd790ad5eb24bc4b6f33f8d288872183186d1",
+      "jobs/training/uccl_budget_sweep_worker.sh": "d7ce77f424056bb45a9c8bc9d2cb6e3e5ca099254922a5573ffc9372b57f38ec",
+      "jobs/training/uccl_debug_coordinator.sh": "0288d9e7f121e09135141a4a2611bbe04a7986093c069f3b8e14d08831dfc1e6",
+      "jobs/training/uccl_debug_reordered_coordinator.sh": "f0489e5f116550a4aa1b5a5ae7204ee5c19597db36d026ff94697a21a87084cd",
+      "jobs/training/uccl_debug_reuse_partition_coordinator.sh": "3f7b578a9fc1b747331bcdca2eeb5de7f85b6cc7d3168d60369122a8a0cb162d",
+      "jobs/training/uccl_ep_comparison.sbatch": "e6dc1cfc9ec1cfe8b5120889627f3019d3456f9de401a974e4cbb378b3fce699",
+      "jobs/training/uccl_ep_debug_case.sbatch": "cf47ea3d08f9248fca9d4f4034cf74c9ef03fdf0bc8d9acf6ae702c88bc88124",
+      "jobs/training/uccl_ep_debug_reuse.sbatch": "be75fbae71d2981c0e7ee80f3f1ccc23af83f4b6d2a60c78d9ad2187c516f18d",
+      "profiling/ampa_profile/__init__.py": "2ba70cd8fffab01471f30116bae012a3c64f9e056a40681c41fcfec85af76506",
+      "profiling/ampa_profile/c0_mock_sanity.py": "b0b97180da83a8555205f6419619a18fe8651c2b06e2be7a5b803e905fc9f7ba",
+      "profiling/ampa_profile/callback.py": "f453af0d2b4243734e55ab389d64c33c096f509ce657c7eceaecb311923188f6",
+      "profiling/ampa_profile/deep_trace.py": "acd2c9553ab50aa27a4da9b477a2f781a44d03f6d43c3fe55553901c52bd84b6",
+      "profiling/ampa_profile/observer.py": "caba91d4857440cb75ad857ea1418ba09441261f1d209b69018180ef21fb5154",
+      "profiling/ampa_profile/overlap_capture.py": "cd6920a6ee8595319d95317a9b257103dd59acb9e8123a82fbdc543120685e6b",
+      "profiling/ampa_profile/overlap_trace.py": "84ac15172505d2d2b2bc6278ddb8f71c1d2c7f2d9929a48753956e7f04ca58fb",
+      "profiling/ampa_profile/provenance.py": "38f3886ded168fd1b0e2b59be73d4ba77fc02bc98701354a3c041eb691e751a5",
+      "profiling/ampa_profile/routing_audit.py": "8012ca22be5364ea0892472ee16dd178f9cd4edbab579321e608572c3f0ccf99",
+      "profiling/ampa_profile/sample_fingerprint.py": "768f03c4f26e2cf073c59d6bd0f9eac3cac10a88b7cfffd2acf7bbfe8264fd57",
+      "profiling/ampa_profile/uccl_identity.py": "47ccf514ff0dc8059cefc0da5e634a33ed38c150dd6ec1659f841a24507fd33b",
+      "profiling/ampa_profile/uccl_trace.py": "ba615f592bbbd477315d7a91f1f20c9bafa2a1af14436876098a82888fcc1634",
+      "profiling/run_pretrain.py": "c891f2827065a0312879baba1c4b8f95187b61dd62026c173f126f006eab264c",
+      "profiling/run_pretrain_debug.py": "edae5cb5b9a7157ca3d4c532362903ca577989ac899d2703c403acbd1f68b955",
+      "profiling/run_pretrain_debug_reuse.py": "b9599409a9043305c17bb2d18885f4baecc08fcdea6eed468e1f013e154c4348",
+      "profiling/run_pretrain_ep_overlap.py": "ca89cf19adc84bfca4dc579be4cbfacd1ebcf18630234a0802669438f9cc814f",
+      "profiling/run_pretrain_ep_overlap_budget.py": "bc5575241d2919b518114a06c22535ec898eccc5904e6629cd0a2da5a3c5d1d1",
+      "profiling/run_pretrain_uccl_budget.py": "d204370d65ff10280159b31de88bb4f0a1e6525d4a92629c4a13e263b9070f13",
+      "scripts/build_gh200_image.sbatch": "8ede4b663a6b1e90a7701e444f8fa198d4db47326e6589d00e83ee93d8a719f0",
+      "setup/Dockerfile.gh200-cuda130": "c6ad3fa96a6ca03951393f6ab60f6fe9cc3a613e18c6101748204d9c236f17bc",
+      "setup/gh200-cuda130-runtime.toml": "9073e481a610b076f3a10820cb5213b2f596f5624cdfc039f5a3037a0b9af438",
+      "tests/test_accept_uccl_pilot.py": "1f133643332832236260fad9151d1027b291a641bc4e1ff37f61bf9cd06de871",
+      "tests/test_all_step_profiling.py": "3b5d3b92d33e4183cc474b19fc90c9f217a306cbec796af0f50e06ef5905a6ef",
+      "tests/test_deep_trace.py": "09ce0d359c121e1dfaf545fe06e822279b5f45becd990c7b38e3f582e2c8bee9",
+      "tests/test_ep16_analysis.py": "2d2f40f4386cb16c38c29a754a4f12973c60c4cbf5b1e6713c957b54bd54b8b6",
+      "tests/test_ep16_observers.py": "98988ab1a8f89b7371f1401cd4d0796c066511dbd8162cdfb4a3c57afd382e55",
+      "tests/test_ep16_received_routes.py": "2033a7327af1998d42645b1103d9b93804e9465ed2975ef80593b81624dbb4d7",
+      "tests/test_ep16_runtime.py": "3480e9287f713ac8dce541f73b0949062a628c695df91ae9dddbc0db52ab9938",
+      "tests/test_ep_overlap_budget_entrypoint.py": "6dd8a85c4186f58171c3371e7d46487d2195858309d2cce3f4a8fa847da12690",
+      "tests/test_ep_overlap_budget_validate.py": "32a0fb7b7cab1d150a438eb85f81c674c218563713d96a2bbd08321094daade7",
+      "tests/test_ep_overlap_campaign_summary.py": "3926e6fb1ef3d714be614794bb56d82cdf8c97a71845c31e3166cdf5851f95bd",
+      "tests/test_ep_overlap_capture.py": "ff6bbb0613f9ecd10f55f808dea488efc8e1f8fc54e13dccd9502110bd96afaa",
+      "tests/test_ep_overlap_entrypoint.py": "a9faa028e5aec4e1b60daf3ab4071df8e4278e09e8e5d2c1a65efed1f92a2ccd",
+      "tests/test_ep_overlap_gpu_activity.py": "0ca9970c2fc42a60063077ddd40d9acc535e2f9f018bba946d49b246cbf436da",
+      "tests/test_ep_overlap_nsys_posthoc.py": "67272f39ea5f0adc608612d09a375502f72f0543f334666c3edafba1b54494eb",
+      "tests/test_ep_overlap_validate.py": "65744344a5e72b60391bce0b65c78a5af38290a80d57081534e0e2dd7624a86e",
+      "tests/test_indexed_run_provenance.py": "db6bc5ff1cb0e71003de25a9b438250d59e74a7155fe15182f54f0a6d6e27f9c",
+      "tests/test_overlap_trace.py": "b4f78d1de6239a8fe315f355cd5e95c6be9d36bdda8f2955b8d8682976bd6f38",
+      "tests/test_uccl_budget_entrypoint.py": "c4d1e007d844d5644391b863ab2190b6a8a5862d2a25c8a00f3973bd6f9ab77a",
+      "tests/test_uccl_debug_entrypoint.py": "3a0ad9a943b757dda7ff5cb6c146f305581c67e2432c288f0a5abd5421688a01",
+      "tests/test_uccl_debug_reuse.py": "5532dd729bbcc7ab212dfe809d02e0bfc4c9708617a32982f2e514fe4aa277b9",
+      "tests/test_uccl_ep_debug_validate.py": "f7044ed2cbb7d0cb72541d67310b527466bc7d02bb0c7e916adc7a5dfe51eb92",
+      "tests/test_uccl_ep_source_identity.py": "2a986a124faf1e8131c6ed35b58eafc30fd1c8bbdf7f15e2039d212a18b07b8a",
+      "tests/test_uccl_identity.py": "fea5644d2b2ee172329262e593da3806382514efa5bb11520413b0511a3beb53",
+      "tests/test_uccl_pretrain_config.py": "0052d5a1d4c54c0aedd653a36ce4c6cbaccf9491bd56354067977768dc2da254",
+      "tests/test_validate_torch_trace.py": "1d3eab8e65212d61da47afb88e69688cb977bf7a574a9d3b5d4e2ae81fc333be",
+      "tools/__init__.py": "81d4a315958577da63a344b09f3ade06add23fa87cdaa7f7de1d87b2655ccf22",
+      "tools/bridge_indexed_consumer.py": "ac473f214bffa0ac4be673ea35a6cbea5eb07c4954a1174bb24268c9c4a6d4ab",
+      "tools/c0_validation.py": "0f5834f79acdcf08f31863fc8ccb6414ab165f955dd9cad419529cb2dcd28a96",
+      "tools/check_uccl_budget_runtime.py": "811a17f541e81d9b0a13dc7910aafd58252deafca31a1902664fbc97c4611945",
+      "tools/ep16_indexed_manifest.py": "8d48e4afdd32bb45a60b8e03c14cff6a3592526b278e0984b87ac44b7dc75524",
+      "tools/ep16_posthoc_proof.py": "fcce194511792ea6c365f3b096fbfad35ee54bbdc0a57b8ae19c5e8cb3426997",
+      "tools/ep16_recovery_placement.py": "970fe63fd42b50027d5e95f00cc95462cb12c39fdea64990a7e532be8d961480",
+      "tools/ep16_reviewed_inputs.py": "c6e3e9470deacb63ef2504d6be9fb9a78ec34b3c7abffe31a6458f221fa6bfa8",
+      "tools/ep_overlap_budget_preflight.py": "2de9aaf8e8a3f54d6cfcbf4b348ab2e858d33f549ad715ee7951e3eb9e7d827a",
+      "tools/ep_overlap_budget_validate.py": "c7f8fe5d277185df5ed40bed5aadf3714e2f691e0cfebe3e58d7b213a25a6bf3",
+      "tools/ep_overlap_campaign_summary.py": "e7723d46ce364f761e9c4240056d5aa9c89cf9dfa271dbefcfee8f7965f77047",
+      "tools/ep_overlap_nsys_posthoc.py": "599696529a182db97c8751406f9d3f5c5b6091aa15709eafd12a2e8f0d6abd9f",
+      "tools/ep_overlap_preflight.py": "bed1e0307d32db7b2f1b3e530947da5a866b286b7257be21620263e3f9e50792",
+      "tools/ep_overlap_validate.py": "3ca691ffc31981248de5a8cc451de7021a034a5e925389ff5fe1ac0f19b92834",
+      "tools/inspect_gpu_identity.py": "eda640d939ce401888cefb0643bfb79704167d1e5f2b09ba512cf88536a84006",
+      "tools/materialize_hf_snapshot.py": "1bc2a38b9a151af2e5628accd093c36104fa3961c9645832dec829a9cef45716",
+      "tools/materialize_indexed_mixture.py": "ca055f46ecb5a9b3919b4cbf8bf1f885377939ef340999f1ee9a0d298d7d4d66",
+      "tools/megatron_cache_contract.py": "1c24cb7990fc98039d31fbf5187e19e9798a904c00532c0697a6f7a93a4ce996",
+      "tools/megatron_cache_stage.py": "544f5dff9a4dfacb8ff82f2aab7edf377757af160cec868971e23a104ee43c55",
+      "tools/promote_cp2_feasibility_manifest.py": "e69be4bd4e53c032b02947008404060233f9d7ccb1ca75c782d689bb71df8f03",
+      "tools/promote_indexed_manifest.py": "1612554561e70bcd64546aea4a7c6ea4bd0c597b4211ed16bb3e360298c75455",
+      "tools/qualify_uccl_budget_capture.py": "4fa2090c5b6eee4a5381d446a2bb10365052d478af5e0b9228bbdc2851cc7f30",
+      "tools/qwen_workload.py": "7d6818626012bb9a031d4751b34df1b7bd1da542727418e1a801dd9d0a6f161d",
+      "tools/uccl_budget_sweep_posthoc.py": "642b4f3e668783b3cbd5e4ccff0c4117e251bafabd33497861bd28084d359f01",
+      "tools/uccl_debug_campaign_validate.py": "3242a1bf70f39419531e58564a58e39264cd83de18932c8d1957a18dba68466b",
+      "tools/uccl_ep_debug_validate.py": "d79d70297512e4208ffbd18931fd69bec6e6c5fe82cb681737086d6a9fefca95",
+      "tools/uccl_ep_dispatch_smoke.py": "6a410147c29110fc2bc8db2f5ef377437d9be6175890a1fd91a637cfc0b777b9",
+      "tools/uccl_ep_log_proof.py": "0a7641ec91ebd96ef874d79a1a2206b344b36ce7632dbc6fd6015a7cf424bfa9",
+      "tools/uccl_ep_source_identity.py": "529fe07d737ddbd37c6342f11ae1e347d198cf61b0252cf368d085843157cbc5",
+      "tools/uccl_ep_validate_profiles.py": "98e3ebc6a8b4305ad34a0e427f0aebd1aeace416d56c40e423c7b8c10204a2eb",
+      "tools/uccl_ep_verified_inputs_reuse.py": "b6702c27ce7302bb586412df19a5d7ca9cc9d2b8e4d171d87636bb42d3d6b944",
+      "tools/validate_indexed_mixture.py": "4d344a1ffe87f16f51b2e44f16fc6f4cf9dfc338a1e2e73ee1cf536195c43151",
+      "tools/write_c0_manifest.py": "722085f9d16ab9b49105e142f8373433c2800a10bf276697ecfa64094c34a91c"
+    },
+    "path": "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa/runs/ep-overlap-budget-off-qa-20261110T221142Z/source.sha256",
+    "sha256": "252ef8a09ddb96efef52ceebf339a52287e2dc48422f0a9fa472f5d41fc76927"
+  },
+  "source_manifest_sha256": "252ef8a09ddb96efef52ceebf339a52287e2dc48422f0a9fa472f5d41fc76927",
+  "started_utc": "2026-11-10T22:12:19.611788+00:00",
+  "static_budget_thread_ceiling": 64,
+  "supported_budgets": [
+    4,
+    6,
+    8,
+    10,
+    12,
+    14,
+    16,
+    18,
+    20,
+    22,
+    24,
+    26,
+    28,
+    30,
+    32,
+    34,
+    36,
+    38,
+    40,
+    42,
+    44,
+    46,
+    48,
+    50,
+    52,
+    54,
+    56
+  ],
+  "training_executed": false,
+  "valid_preflight": true,
+  "versions": {
+    "cuda": "13.0",
+    "torch": "2.8.0a0+34c6371d24.nv25.08",
+    "transformer_engine": "2.19.0+5e52befd"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "accepted": true,
+  "accepted_utc": "2026-11-11T04:19:42Z",
+  "scope": "Bounded adaptive unprofiled UCCL payload-budget sweep with compatible expert-parallel overlap",
+  "accepted_pair_count": 20,
+  "full_case_count": 40,
+  "complete_optimizer_updates": 400,
+  "measured_optimizer_updates": 200,
+  "candidate_budgets": [
+    4,
+    8,
+    12,
+    32,
+    40,
+    48,
+    56
+  ],
+  "paired_reference_budget": 20,
+  "protocol": "ep_overlap_ordinary_off_budget_5_plus_5_v1",
+  "acquisition_source_sha256": "252ef8a09ddb96efef52ceebf339a52287e2dc48422f0a9fa472f5d41fc76927",
+  "summary_source_sha256": "2b170f107aabc07c1da917f37ff6ed8eb5c97fb2da03850e64f62037a4b2c5f6",
+  "summary_qa": {
+    "job": "3913091",
+    "state": "COMPLETED",
+    "exit_code": "0:0",
+    "tests": 7,
+    "elapsed_seconds": 18
+  },
+  "summary_execution": {
+    "job": "3913094",
+    "state": "COMPLETED",
+    "exit_code": "0:0",
+    "elapsed_seconds": 112
+  },
+  "independent_review": {
+    "path": "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa/ai/ep-overlap-budget-summary-review/iteration-01/FINAL_REVIEW.md",
+    "sha256": "a50f41d96113ad3023afc3f60974b98ac297fe0d17a28ec68f558ab44aef6ef0",
+    "result": "PASS"
+  },
+  "report": {
+    "path": "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa/docs/QWEN_UCCL_UNPROFILED_BUDGET_AUDIT.md",
+    "sha256": "f610ca9e0d4dd253aeb2f82f9d4ab7504148b98c2ee81ef866bda4dd53e0b858"
+  },
+  "metrics": {
+    "path": "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa/runs/ep-overlap-budget-summary-final-20261111T041250Z/metrics.json",
+    "sha256": "c8aa699baa1f73be1e40c5da7fe585100cccea23ccbf984ab8eeb2bbb6f59e7a"
+  },
+  "reviewed_artifacts": {
+    "path": "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa/runs/ep-overlap-budget-summary-final-20261111T041250Z/FINAL_REVIEWED_ARTIFACTS.sha256",
+    "sha256": "54c2296dc6f57e0e9d83ca5a0365bc6dea8e371d5a63c9d01c0ac6ec398f3dc0",
+    "all_bindings_rechecked": true
+  },
+  "final_decision_path": "/iopsstor/scratch/cscs/anunay/swissai/post-training/ampa/runs/ep-overlap-budget-off-adaptive-20261110T223433Z-b56-reference-first-r3-attempt1-posthoc/next_decision.json",
+  "result": {
+    "lowest_observed_median_budget": 40,
+    "median_candidate_over_reference_step_time": 0.9784990549120511,
+    "lower_boundary": "repeatably_worse_at_4_relative_to_40",
+    "upper_boundary": "supported_limit_at_56_without_clear_degradation",
+    "global_optimum_claimed": false
+  },
+  "validation": {
+    "original_640_sample_prefix_matches": true,
+    "same_actual_16_gpu_placement_within_each_pair": true,
+    "raw_timers_health_routing_and_actual_budget_guards_reconciled": true,
+    "all_twenty_decision_snapshots_replayed": true
+  },
+  "exclusions": {
+    "qualification_in_performance": false,
+    "failed_full_pair_attempts": 1,
+    "failed_attempt_used_as_performance": false
+  },
+  "interpretation": "40 has the lowest observed median in two reversed-order pairs. 56 varies strongly and is not a reliably faster choice.",
+  "limits": [
+    "Two or three allocation replicates per candidate, with five sequential measured subsamples per leg.",
+    "The 2% rule is operational and does not establish statistical significance.",
+    "Common audit observers remain enabled; no sampled SM activity, occupancy or free-SM claim.",
+    "The upper performance decline remains unresolved at the qualified native resource limit."
+  ]
+}
